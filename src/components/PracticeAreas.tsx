@@ -66,7 +66,7 @@ const PracticeAreas = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {areas.map((area, index) => (
+          {areas.map((area) => (
             <div 
               key={area.title}
               className="bg-white p-10 rounded-sm shadow-sm hover:shadow-xl transition-all duration-500 group border-b-2 border-transparent hover:border-accent-gold"

@@ -1,10 +1,88 @@
 <!doctype html>
-<html lang="en">
+<html lang="es-AR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>landing-page-braki-y-asoc</title>
+    <!-- SVG first for browsers that support it; PNGs for Safari, which does not,
+         and apple-touch-icon for iOS home-screen bookmarks. -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Fonts: preconnect first so the font files start downloading in parallel
+         instead of waiting for the CSS to be parsed. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+    />
+
+    <title>Estudio Jurídico Braki &amp; Asoc. | Abogados en Tapiales, Zona Oeste</title>
+    <meta
+      name="description"
+      content="Estudio jurídico en Tapiales, Zona Oeste. Derecho laboral, ART, daños y perjuicios, civil, comercial y penal. Asesoramiento legal con atención personalizada. Consultá hoy."
+    />
+    <meta name="theme-color" content="#3B2A20" />
+    <link rel="canonical" href="https://brakiyasoc.com.ar/" />
+
+    <!-- Open Graph / WhatsApp / Facebook.
+         NOTE: og:url and og:image must be ABSOLUTE URLs for WhatsApp and Facebook
+         to render the preview card. Replace the domain below once the site is deployed. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Estudio Jurídico Braki & Asoc." />
+    <meta property="og:title" content="Estudio Jurídico Braki & Asoc. | Abogados en Tapiales" />
+    <meta
+      property="og:description"
+      content="Defensa estratégica y soluciones concretas. Derecho laboral, ART, daños y perjuicios, civil, comercial y penal."
+    />
+    <meta property="og:url" content="https://brakiyasoc.com.ar/" />
+    <meta property="og:image" content="https://brakiyasoc.com.ar/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Estudio Jurídico Braki & Asoc." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Estudio Jurídico Braki & Asoc. | Abogados en Tapiales" />
+    <meta
+      name="twitter:description"
+      content="Defensa estratégica y soluciones concretas. Consultá hoy."
+    />
+    <meta name="twitter:image" content="https://brakiyasoc.com.ar/og-image.jpg" />
+
+    <!-- Structured data: helps Google show the firm as a local business. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Estudio Jurídico Braki & Asoc.",
+        "description": "Asesoramiento legal integral con enfoque boutique.",
+        "email": "braki.abogados@gmail.com",
+        "telephone": "+5491164949605",
+        "sameAs": ["https://www.instagram.com/braki.abogados/"],
+        "areaServed": "Buenos Aires, Argentina",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Boulogne Sur Mer 820",
+          "addressLocality": "Tapiales",
+          "addressRegion": "Buenos Aires",
+          "addressCountry": "AR"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Pablo Matías Braki",
+          "jobTitle": "Abogado"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

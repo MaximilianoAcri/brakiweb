@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Inter:wght@400&family=Montserrat:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -7,12 +6,14 @@
   --color-primary-text: #3B2A20;
   --color-accent-corporate: #1C2F40;
   --color-accent-gold: #C8A565;
+  /* Darker bronze for gold text on light backgrounds (5:1 on the cream background). */
+  --color-accent-gold-text: #7E6029;
   --color-neutral-surface: #E2D1B8;
   --color-neutral-muted: #5C4B3E;
 
-  --font-serif: "Cormorant Garamond", serif;
+  --font-serif: "Spectral", serif;
   --font-sans: "Inter", sans-serif;
-  --font-display: "Montserrat", sans-serif;
+  --font-display: "Inter", sans-serif;
 }
 
 @layer base {
@@ -38,6 +39,20 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
   }
+
+  /* Every interactive element needs a focus indicator a keyboard user can see.
+     :focus-visible only fires for keyboard navigation, so mouse clicks stay clean. */
+  :focus-visible {
+    outline: 2px solid var(--color-accent-gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Anchor jumps land below the fixed navbar instead of underneath it. */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
 }
 
 @layer utilities {
@@ -47,10 +62,35 @@
     animation: fadeInUp 0.8s ease forwards;
   }
 
+  /* 24 seconds for a 4% push-in: slow enough that it reads as depth rather
+     than as an animation. The prefers-reduced-motion block below stops it. */
+  @keyframes heroZoom {
+    from { transform: scale(1); }
+    to   { transform: scale(1.04); }
+  }
+
   @keyframes fadeInUp {
     to {
       opacity: 1;
       transform: translateY(0);
     }
+  }
+}
+
+/* Respect the OS-level "reduce motion" setting: users with vestibular
+   disorders can be made physically unwell by looping or sliding animations. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fade-in-up {
+    opacity: 1;
+    transform: none;
   }
 }

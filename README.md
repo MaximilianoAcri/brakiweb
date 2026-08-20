@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# Landing page — Estudio Jurídico Braki & Asoc.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Single-page site for a law firm based in Tapiales, Zona Oeste, Buenos Aires.
 
-Currently, two official plugins are available:
+Built with React 19, TypeScript, Vite and Tailwind CSS v4.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Getting started
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The dev server runs on http://localhost:5173.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Script | What it does |
+| --- | --- |
+| `npm run dev` | Start the dev server with hot reload |
+| `npm run build` | Type-check (`tsc -b`) and build to `dist/` |
+| `npm run preview` | Serve the production build locally |
+| `npm run lint` | Run ESLint |
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Project layout
+
 ```
+src/
+  config.ts              Contact details and form endpoint — single source of truth
+  components/
+    Navbar.tsx           Fixed header, scroll state, mobile drawer
+    Hero.tsx             Full-screen hero
+    PracticeAreas.tsx    Practice-area cards
+    WhyChooseUs.tsx      Differentiators and stats
+    About.tsx            Firm bio and founder
+    Contact.tsx          Contact details and enquiry form
+    Footer.tsx           Footer navigation
+  assets/                Images (the .webp files are the ones actually shipped)
+public/                  favicon, og-image, robots.txt, sitemap.xml
+```
+
+## Contact form
+
+Enquiries are delivered by [FormSubmit](https://formsubmit.co) to the address in
+`src/config.ts`. No account and no backend are required.
+
+**One-time activation:** the first submission is not delivered. FormSubmit sends
+a confirmation email to that address — click the link in it once, and every
+later submission arrives in the inbox.
+
+If delivery fails, the form falls back to offering WhatsApp with the enquiry
+pre-filled, so a consultation is never silently lost.
+
+Optionally, copy `.env.example` to `.env` and set `VITE_FORMSUBMIT_TOKEN` to the
+random endpoint token FormSubmit issues after activation. That keeps the email
+address out of the built page source.
+
+## Before deploying
+
+- [ ] Replace the placeholder domain `brakiyasoc.com.ar` in `index.html`
+      (`og:url`, `og:image`, `canonical`), `public/robots.txt` and
+      `public/sitemap.xml`. Open Graph needs absolute URLs or link previews on
+      WhatsApp and Facebook will not render.
+- [ ] Activate the contact form (see above) and send one test enquiry.
+- [ ] Add a privacy policy page. The form collects personal data, which brings
+      it under Argentina's Ley 25.326. The footer's "Legal" column was removed
+      because its links pointed nowhere — it should come back pointing at a real
+      page.
+
+## Images
+
+`Fondohero.png` and `fotoperfil.jpeg` are the originals and are **not** shipped —
+nothing imports them. The components import the `.webp` versions, which are
+~98% smaller. If you replace an image, convert it before wiring it up.

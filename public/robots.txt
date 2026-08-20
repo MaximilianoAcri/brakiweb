@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# NOTE: replace the domain below with the real one once the site is deployed.
-Sitemap: https://brakiyasoc.com.ar/sitemap.xml
+Sitemap: https://www.firmabrakiasoc.com.ar/sitemap.xml

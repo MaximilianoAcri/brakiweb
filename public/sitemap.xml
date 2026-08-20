@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- NOTE: replace the domain with the real one once the site is deployed. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://brakiyasoc.com.ar/</loc>
+    <loc>https://www.firmabrakiasoc.com.ar/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>

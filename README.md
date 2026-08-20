@@ -55,10 +55,12 @@ address out of the built page source.
 
 ## Before deploying
 
-- [ ] Replace the placeholder domain `brakiyasoc.com.ar` in `index.html`
+- [x] Domain wired to `www.firmabrakiasoc.com.ar` in `index.html`
       (`og:url`, `og:image`, `canonical`), `public/robots.txt` and
-      `public/sitemap.xml`. Open Graph needs absolute URLs or link previews on
-      WhatsApp and Facebook will not render.
+      `public/sitemap.xml`.
+- [ ] Delegate the domain at NIC.ar to `ns1.vercel-dns.com` and
+      `ns2.vercel-dns.com` (both, no glue IPs). Until then the domain returns
+      NXDOMAIN and Vercel reports an invalid configuration.
 - [ ] Activate the contact form (see above) and send one test enquiry.
 - [ ] Add a privacy policy page. The form collects personal data, which brings
       it under Argentina's Ley 25.326. The footer's "Legal" column was removed

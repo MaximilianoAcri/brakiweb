@@ -1,42 +1,45 @@
-import fotoPerfil from '../assets/fotoperfil.jpeg';
+import fotoPerfil from '../assets/fotoperfil.webp';
+import Reveal from './Reveal';
 
 const About = () => {
   return (
-    <section id="sobre-el-estudio" className="py-32 bg-white overflow-hidden">
+    <section id="sobre-el-estudio" className="py-20 md:py-32 bg-white overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col lg:flex-row items-center gap-20">
           {/* Image Section */}
-          <div className="w-full lg:w-1/2 relative">
+          <Reveal className="w-full lg:w-1/2 relative">
             <div className="relative z-10">
               <div className="aspect-[4/5] rounded-sm overflow-hidden shadow-2xl">
                 <img 
                   src={fotoPerfil} 
                   alt="Pablo Matías Braki" 
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                 />
               </div>
               
               {/* Badge/Overlay */}
-              <div className="absolute -bottom-10 -right-10 bg-accent-gold p-10 text-white shadow-2xl hidden md:block">
-                <p className="text-[10px] font-display uppercase tracking-[0.3em] font-bold mb-3 text-white/80">Fundador</p>
+              <div className="absolute -bottom-10 -right-10 bg-accent-gold p-10 text-primary-text shadow-2xl hidden md:block">
+                <p className="text-[10px] font-display uppercase tracking-[0.3em] font-bold mb-3 text-primary-text">Fundador</p>
                 <p className="text-3xl font-serif font-bold mb-1">Pablo Matías Braki</p>
-                <p className="text-white/70 text-xs font-display tracking-widest italic">Abogado</p>
+                <p className="text-primary-text text-xs font-display tracking-widest italic">Abogado</p>
               </div>
             </div>
             
             {/* Background decorative square */}
             <div className="absolute -top-10 -left-10 w-full h-full border-[1px] border-accent-gold/20 -z-10" />
-          </div>
+          </Reveal>
 
           {/* Text Section */}
-          <div className="w-full lg:w-1/2">
-            <h2 className="text-accent-gold font-display font-bold uppercase tracking-[0.3em] text-[10px] mb-6">Sobre el Estudio</h2>
-            <h3 className="text-5xl md:text-6xl font-serif text-primary-text mb-10 leading-tight">
+          <Reveal delay={120} className="w-full lg:w-1/2">
+            <p className="text-accent-gold-text font-display font-bold uppercase tracking-[0.3em] text-[10px] mb-6">Sobre el Estudio</p>
+            <h2 className="text-5xl md:text-6xl font-serif text-primary-text mb-10 leading-tight">
               Excelencia Jurídica <br />
               con Visión Estratégica.
-            </h3>
+            </h2>
             
-            <div className="space-y-6 text-primary-text/70 leading-relaxed font-sans">
+            <div className="space-y-6 text-primary-text/80 leading-relaxed font-sans">
               <p>
                 El <strong className="text-primary-text">Estudio Jurídico Braki & Asoc.</strong> nace con el propósito de redefinir la relación entre el abogado y su cliente. 
                 Entendemos que detrás de cada consulta hay una historia, una preocupación y una necesidad de soluciones reales.
@@ -62,7 +65,7 @@ const About = () => {
                 </div>
                 <div>
                   <p className="text-primary-text font-bold text-[11px] font-display uppercase tracking-widest">Matriculado</p>
-                  <p className="text-[10px] text-primary-text/50 font-display tracking-widest">CPACF / CASM</p>
+                  <p className="text-[10px] text-primary-text/75 font-display tracking-widest">CPACF / CASM</p>
                 </div>
               </div>
 
@@ -74,11 +77,11 @@ const About = () => {
                 </div>
                 <div>
                   <p className="text-primary-text font-bold text-[11px] font-display uppercase tracking-widest">Especialista</p>
-                  <p className="text-[10px] text-primary-text/50 font-display tracking-widest">Laboral y Civil</p>
+                  <p className="text-[10px] text-primary-text/75 font-display tracking-widest">Civil y Comercial – ART</p>
                 </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

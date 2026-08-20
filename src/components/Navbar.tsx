@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { CALENDLY_URL } from '../config';
+import Logo from './Logo';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,49 +32,56 @@ const Navbar = () => {
         {/* Logo Section */}
         <div className="flex items-center">
           <a href="#inicio" className="transition-opacity hover:opacity-90 flex items-center">
-            <span className={`font-serif font-bold text-2xl tracking-tighter whitespace-nowrap transition-colors duration-300 ${
-              isScrolled ? 'text-primary-text' : 'text-white'
-            }`}>
-              Braki & Asoc.
-            </span>
+            <Logo tone={isScrolled ? 'dark' : 'light'} />
           </a>
         </div>
 
         {/* Navigation Links - Desktop */}
-        <div className="hidden md:flex items-center space-x-10">
+        <div className="hidden lg:flex items-center space-x-10">
           {navLinks.map((link) => (
             <a 
               key={link.name}
               href={link.href}
-              className={`text-[11px] font-display font-semibold tracking-[0.2em] uppercase hover:text-accent-gold transition-colors duration-300 ${
+              className={`group relative text-[11px] font-display font-semibold tracking-[0.2em] uppercase hover:text-accent-gold transition-colors duration-300 py-2 ${
                 isScrolled ? 'text-primary-text' : 'text-white'
               }`}
             >
               {link.name}
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute left-0 -bottom-0.5 h-px w-full origin-left scale-x-0 bg-accent-gold transition-transform duration-300 group-hover:scale-x-100 motion-reduce:transition-none"
+              />
             </a>
           ))}
         </div>
 
         {/* CTA Button */}
-        <div className="hidden md:flex items-center">
-          <a 
-            href="https://wa.me/5491164949605" 
-            target="_blank" 
+        <div className="hidden lg:flex items-center">
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent-gold hover:bg-[#B59640] text-white px-7 py-3 rounded-sm text-[10px] font-display font-bold uppercase tracking-[0.2em] transition-all duration-300 shadow-lg shadow-accent-gold/20"
+            className="bg-accent-gold hover:bg-[#D9BC85] text-primary-text px-7 py-3 rounded-sm text-[10px] font-display font-bold uppercase tracking-[0.2em] transition-all duration-300 shadow-lg shadow-accent-gold/20 inline-flex items-center gap-2"
           >
-            Consultá ahora
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            Agendá tu reunión
           </a>
         </div>
 
         {/* Mobile Menu Toggle */}
-        <button 
-          className={`md:hidden p-2 transition-colors duration-300 ${
+        <button
+          type="button"
+          className={`lg:hidden p-3 transition-colors duration-300 ${
             isScrolled ? 'text-primary-text' : 'text-white'
           }`}
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             {isOpen ? (
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             ) : (
@@ -83,23 +92,36 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Drawer */}
-      <div className={`md:hidden absolute top-full left-0 w-full bg-primary-bg shadow-xl transition-all duration-300 overflow-hidden ${isOpen ? 'max-h-96' : 'max-h-0'}`}>
+      {/* `invisible` when collapsed keeps the links out of the tab order —
+          `max-h-0` alone still lets keyboard users focus hidden links. */}
+      <div
+        id="mobile-menu"
+        className={`lg:hidden absolute top-full left-0 w-full bg-primary-bg shadow-xl transition-all duration-300 overflow-hidden ${
+          isOpen ? 'max-h-screen visible' : 'max-h-0 invisible'
+        }`}
+      >
         <div className="flex flex-col p-6 space-y-4 border-t border-secondary-bg/50">
           {navLinks.map((link) => (
             <a 
               key={link.name}
               href={link.href}
-              className="text-sm font-display font-medium uppercase tracking-[0.15em]"
+              className="text-sm font-display font-medium uppercase tracking-[0.15em] py-2"
               onClick={() => setIsOpen(false)}
             >
               {link.name}
             </a>
           ))}
-          <a 
-            href="https://wa.me/5491164949605"
-            className="bg-accent-gold text-white text-center py-4 rounded-sm text-xs font-display font-bold uppercase tracking-[0.2em]"
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsOpen(false)}
+            className="bg-accent-gold text-primary-text text-center py-4 rounded-sm text-xs font-display font-bold uppercase tracking-[0.2em] flex items-center justify-center gap-2"
           >
-            Consultá ahora
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            Agendá tu reunión
           </a>
         </div>
       </div>

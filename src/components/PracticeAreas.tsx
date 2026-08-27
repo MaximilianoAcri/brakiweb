@@ -13,12 +13,12 @@ const AreaCard = ({ title, description, icon }: { title: string; description: st
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="flex flex-col bg-white p-8 md:p-10 rounded-sm shadow-sm hover:shadow-xl motion-safe:hover:-translate-y-1 transition-all duration-500 group border-b-2 border-transparent hover:border-accent-gold">
+    <div className="flex flex-col bg-white p-7 md:p-9 rounded-sm shadow-sm hover:shadow-xl motion-safe:hover:-translate-y-1 transition-all duration-500 group border-b-2 border-transparent hover:border-accent-gold">
       <div className="text-accent-gold mb-6 group-hover:scale-110 transition-transform duration-500 motion-reduce:group-hover:scale-100">
         {icon}
       </div>
       <h3 className="text-xl font-serif font-bold text-primary-text mb-4">{title}</h3>
-      <p className={`text-primary-text/75 text-sm leading-relaxed font-sans ${expanded ? '' : 'line-clamp-3'}`}>
+      <p className={`text-primary-text/75 text-[15px] leading-[1.75] font-sans ${expanded ? '' : 'line-clamp-3'}`}>
         {description}
       </p>
       <button
@@ -95,7 +95,7 @@ const PracticeAreas = () => {
     <section id="areas-de-practica" className="py-20 md:py-32 bg-primary-bg">
       <div className="container mx-auto px-6 md:px-12">
         <Reveal className="text-center max-w-2xl mx-auto mb-20">
-          <p className="text-accent-gold-text font-display font-bold uppercase tracking-[0.3em] text-[10px] mb-6">Áreas de Especialización</p>
+          <p className="text-accent-gold-text font-display font-bold uppercase tracking-[0.22em] text-[10px] mb-6">Áreas de Especialización</p>
           <h2 className="text-5xl md:text-6xl font-serif text-primary-text mb-8">Práctica Profesional</h2>
           <div className="w-16 h-[1px] bg-accent-gold mx-auto" />
         </Reveal>

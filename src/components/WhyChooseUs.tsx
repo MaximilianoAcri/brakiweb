@@ -54,12 +54,12 @@ const WhyChooseUs = () => {
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="w-full lg:w-1/2">
-            <p className="text-accent-gold font-display font-bold uppercase tracking-[0.3em] text-[10px] mb-6">Valores del Estudio</p>
+            <p className="text-accent-gold font-display font-bold uppercase tracking-[0.22em] text-[10px] mb-6">Valores del Estudio</p>
             <h2 className="text-5xl md:text-6xl font-serif mb-10 leading-tight">
               ¿Por qué confiar <br />
               en nuestra firma?
             </h2>
-            <p className="text-white/75 text-lg mb-16 max-w-lg leading-relaxed font-sans">
+            <p className="text-white/75 text-lg mb-16 max-w-lg leading-[1.75] font-sans">
               En Braki & Asoc. combinamos la excelencia técnica con una calidez humana que nos diferencia. 
               No solo resolvemos problemas, construimos soluciones.
             </p>
@@ -90,7 +90,7 @@ const WhyChooseUs = () => {
                     <h3 className="text-2xl font-serif font-bold mb-3 group-hover:text-accent-gold transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-white/70 text-sm leading-relaxed max-w-md font-sans">
+                    <p className="text-white/70 text-[15px] leading-[1.75] max-w-md font-sans">
                       {item.description}
                     </p>
                   </div>

@@ -101,7 +101,7 @@ const Contact = () => {
         <div className="flex flex-col lg:flex-row gap-20">
           {/* Contact Info */}
           <Reveal className="w-full lg:w-2/5">
-            <p className="text-accent-gold-text font-display font-bold uppercase tracking-[0.3em] text-[10px] mb-6">Canales de Atención</p>
+            <p className="text-accent-gold-text font-display font-bold uppercase tracking-[0.22em] text-[10px] mb-6">Canales de Atención</p>
             <h2 className="text-5xl md:text-6xl font-serif text-primary-text mb-10 leading-tight">Iniciá tu consulta hoy.</h2>
 
             {/* Booking gets its own block above the channel list: a scheduled
@@ -143,13 +143,13 @@ const Contact = () => {
                     href={MAPS_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary-text/70 text-sm mt-2 font-sans leading-relaxed block hover:text-accent-gold transition-colors py-1"
+                    className="text-primary-text/75 text-[15px] mt-2 font-sans leading-[1.7] block hover:text-accent-gold transition-colors py-1"
                   >
                     {ADDRESS_STREET}
                     <br />
                     {ADDRESS_LOCALITY}
                   </a>
-                  <p className="text-primary-text/70 text-sm mt-3 font-sans leading-relaxed">
+                  <p className="text-primary-text/75 text-[15px] mt-3 font-sans leading-[1.7]">
                     <span className="font-bold text-primary-text">Horario:</span> {OPENING_HOURS}
                   </p>
                 </div>
@@ -165,7 +165,7 @@ const Contact = () => {
                   <h3 className="font-serif font-bold text-primary-text text-xl">Email</h3>
                   <a
                     href={`mailto:${CONTACT_EMAIL}`}
-                    className="text-primary-text/75 text-sm mt-2 font-sans leading-relaxed block hover:text-accent-gold transition-colors py-1"
+                    className="text-primary-text/75 text-[15px] mt-2 font-sans leading-[1.7] block hover:text-accent-gold transition-colors py-1"
                   >
                     {CONTACT_EMAIL}
                   </a>
@@ -180,7 +180,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-serif font-bold text-primary-text text-xl">WhatsApp</h3>
-                  <p className="text-primary-text/75 text-sm mt-2 font-sans leading-relaxed">{WHATSAPP_DISPLAY}</p>
+                  <p className="text-primary-text/75 text-[15px] mt-2 font-sans leading-[1.7]">{WHATSAPP_DISPLAY}</p>
                   <a
                     href={whatsappLink()}
                     target="_blank"
@@ -200,7 +200,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-serif font-bold text-primary-text text-xl">Instagram</h3>
-                  <p className="text-primary-text/75 text-sm mt-2 font-sans leading-relaxed">@{INSTAGRAM_HANDLE}</p>
+                  <p className="text-primary-text/75 text-[15px] mt-2 font-sans leading-[1.7]">@{INSTAGRAM_HANDLE}</p>
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"

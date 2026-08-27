@@ -21,7 +21,7 @@ const About = () => {
               
               {/* Badge/Overlay */}
               <div className="absolute -bottom-10 -right-10 bg-accent-gold p-10 text-primary-text shadow-2xl hidden md:block">
-                <p className="text-[10px] font-display uppercase tracking-[0.3em] font-bold mb-3 text-primary-text">Fundador</p>
+                <p className="text-[10px] font-display uppercase tracking-[0.22em] font-bold mb-3 text-primary-text">Fundador</p>
                 <p className="text-3xl font-serif font-bold mb-1">Pablo Matías Braki</p>
                 <p className="text-primary-text text-xs font-display tracking-widest italic">Abogado</p>
               </div>
@@ -33,13 +33,13 @@ const About = () => {
 
           {/* Text Section */}
           <Reveal delay={120} className="w-full lg:w-1/2">
-            <p className="text-accent-gold-text font-display font-bold uppercase tracking-[0.3em] text-[10px] mb-6">Sobre el Estudio</p>
+            <p className="text-accent-gold-text font-display font-bold uppercase tracking-[0.22em] text-[10px] mb-6">Sobre el Estudio</p>
             <h2 className="text-5xl md:text-6xl font-serif text-primary-text mb-10 leading-tight">
               Excelencia Jurídica <br />
               con Visión Estratégica.
             </h2>
             
-            <div className="space-y-6 text-primary-text/80 leading-relaxed font-sans">
+            <div className="space-y-7 text-primary-text/80 leading-[1.78] font-sans">
               <p>
                 El <strong className="text-primary-text">Estudio Jurídico Braki & Asoc.</strong> nace con el propósito de redefinir la relación entre el abogado y su cliente. 
                 Entendemos que detrás de cada consulta hay una historia, una preocupación y una necesidad de soluciones reales.

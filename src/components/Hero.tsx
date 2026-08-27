@@ -57,7 +57,7 @@ const Hero = () => {
         </h1>
         
         {/* Subtitle */}
-        <p className="text-lg md:text-xl text-white mb-12 max-w-xl leading-relaxed font-sans">
+        <p className="text-lg md:text-xl text-white mb-12 max-w-xl leading-[1.75] font-sans">
           Accidentes de trabajo y ART, daños y perjuicios, defensa del consumidor,
           civil y comercial. Atención personalizada en Tapiales, Zona Oeste.
         </p>

@@ -16,8 +16,19 @@ const Hero = () => {
           decoding="async"
           className="w-full h-full object-cover object-right md:object-center motion-safe:animate-[heroZoom_24s_ease-out_forwards]"
         />
-        {/* Color Overlay: #3B2A20 with 50% opacity */}
-        <div className="absolute inset-0 bg-[#3B2A20]/50 z-10" />
+        {/*
+          A flat 50% veil dimmed the whole photo evenly, which meant the text sat
+          over the plainest part of the image while the colonnade — the part
+          worth showing — got muted along with it.
+
+          This grades instead: dense where the copy sits, thinning towards the
+          columns. On phones the text spans the full width, so the gradient runs
+          vertically and keeps both ends covered.
+        */}
+        <div
+          className="absolute inset-0 z-10 bg-gradient-to-b from-[#3B2A20]/82 via-[#3B2A20]/70 to-[#3B2A20]/82
+                     md:bg-gradient-to-r md:from-[#3B2A20]/90 md:via-[#3B2A20]/72 md:to-[#3B2A20]/25"
+        />
       </div>
       
       <div className="container ml-0 px-6 md:px-12 lg:pl-16 relative z-20 text-left max-w-2xl lg:max-w-none lg:w-3/5 2xl:w-1/2 fade-in-up">
@@ -46,7 +57,7 @@ const Hero = () => {
         </h1>
         
         {/* Subtitle */}
-        <p className="text-lg md:text-xl text-white/90 mb-12 max-w-xl leading-relaxed font-sans">
+        <p className="text-lg md:text-xl text-white mb-12 max-w-xl leading-relaxed font-sans">
           Accidentes de trabajo y ART, daños y perjuicios, defensa del consumidor,
           civil y comercial. Atención personalizada en Tapiales, Zona Oeste.
         </p>

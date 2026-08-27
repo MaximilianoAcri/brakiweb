@@ -52,10 +52,6 @@ const Footer = () => {
               <a href="#contacto" className="text-sm text-white/75 hover:text-white transition-colors font-sans py-2">Contacto</a>
           </div>
 
-          {/* TODO: the "Legal" column previously held Términos de Uso and
-              Privacidad links pointing at href="#". They were removed rather
-              than shipped dead. The contact form collects personal data, so a
-              real privacy policy page is still required. */}
 
           <div className="lg:col-span-4 flex flex-col space-y-3">
               <h2 className="text-accent-gold font-display font-bold uppercase tracking-[0.2em] text-[10px]">Contacto</h2>
@@ -96,10 +92,17 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-20 pt-8 border-t border-white/5">
+        <div className="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <p className="text-white/60 text-[10px] font-display uppercase tracking-widest text-center md:text-left">
             © {new Date().getFullYear()} Estudio Jurídico Braki & Asoc. Todos los derechos reservados.
           </p>
+          {/* Plain <a>, not an anchor link: the policy is a separate static page. */}
+          <a
+            href="/privacidad.html"
+            className="text-white/60 hover:text-white transition-colors text-[10px] font-display uppercase tracking-widest text-center md:text-right py-2"
+          >
+            Política de Privacidad
+          </a>
         </div>
       </div>
     </footer>

@@ -300,6 +300,16 @@ const Contact = () => {
                   {status === 'submitting' ? 'Enviando...' : 'Enviar Consulta'}
                 </button>
 
+                {/* Disposición 10/2008 asks for the notice to appear on the form
+                    itself, not only on a policy page buried in the footer. */}
+                <p className="text-primary-text/75 text-xs font-sans leading-relaxed">
+                  Al enviar aceptás nuestra{' '}
+                  <a href="/privacidad.html" className="text-accent-gold-text font-bold hover:underline">
+                    Política de Privacidad
+                  </a>
+                  . No incluyas documentación ni datos sensibles del caso: eso se conversa en una entrevista.
+                </p>
+
                 {/* aria-live so screen readers announce the result without a page change. */}
                 <div role="status" aria-live="polite">
                   {status === 'success' && (

@@ -62,10 +62,11 @@ address out of the built page source.
       `ns2.vercel-dns.com` (both, no glue IPs). Until then the domain returns
       NXDOMAIN and Vercel reports an invalid configuration.
 - [ ] Activate the contact form (see above) and send one test enquiry.
-- [ ] Add a privacy policy page. The form collects personal data, which brings
-      it under Argentina's Ley 25.326. The footer's "Legal" column was removed
-      because its links pointed nowhere — it should come back pointing at a real
-      page.
+- [x] Privacy policy published at `public/privacidad.html`, linked from the
+      footer and from the contact form itself.
+- [ ] Have the firm review that policy before relying on it. It is a template
+      describing what this site actually does, not legal advice, and it must be
+      updated whenever the form, the booking tool or the hosting change.
 
 ## Images
 

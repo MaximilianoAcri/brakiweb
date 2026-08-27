@@ -28,5 +28,5 @@ dist-ssr
 .env.*
 !.env.example
 
-# Local tooling scratch — contains absolute paths from the dev machine
+# Local tooling scratch - contains absolute paths from the dev machine
 .atl/

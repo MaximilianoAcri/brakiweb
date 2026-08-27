@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[#3B2A20]/50 z-10" />
       </div>
       
-      <div className="container ml-0 px-6 md:px-12 lg:pl-16 relative z-20 text-left max-w-2xl lg:max-w-none lg:w-3/5 xl:w-1/2 fade-in-up">
+      <div className="container ml-0 px-6 md:px-12 lg:pl-16 relative z-20 text-left max-w-2xl lg:max-w-none lg:w-3/5 2xl:w-1/2 fade-in-up">
         {/* Top Label - Adjusted margin and color */}
         <div className="flex flex-col items-start mb-8">
           {/* The firm's emblem, in its light variant so it reads against the

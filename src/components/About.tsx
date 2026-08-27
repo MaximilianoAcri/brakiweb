@@ -45,9 +45,10 @@ const About = () => {
                 Entendemos que detrás de cada consulta hay una historia, una preocupación y una necesidad de soluciones reales.
               </p>
               <p>
-                Liderado por el <strong className="text-primary-text">Dr. Pablo Matías Braki</strong>, nuestro equipo se especializa en navegar la complejidad del sistema legal argentino 
-                con agilidad y precisión. Con una sólida formación jurídica y años de experiencia en el sistema legal argentino, 
-                aplicamos ese conocimiento con precisión y compromiso en cada caso.
+                Liderado por el <strong className="text-primary-text">Dr. Pablo Matías Braki</strong>, el estudio combina una sólida
+                formación jurídica con años de trabajo en el fuero. Conocemos los tiempos, los criterios y las
+                exigencias del sistema legal argentino, y aplicamos ese conocimiento con rigor y compromiso
+                en cada expediente.
               </p>
               <p>
                 Nuestra filosofía es simple: <strong className="text-primary-text">defensa estratégica</strong>. No nos limitamos a responder; nos anticipamos. 

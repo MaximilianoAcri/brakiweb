@@ -1,0 +1,200 @@
+<!doctype html>
+<!--
+  Vercel devolvia su pantalla generica: fondo blanco, "The page could not be
+  found" y un codigo de error. Sin marca, sin menu y sin forma de volver.
+-->
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página no encontrada | Estudio Jurídico Braki &amp; Asoc.</title>
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <style>
+      /* Fuentes propias: esta pagina no debe pedirle nada a terceros, menos aun
+         siendo la que declara que el sitio no transfiere datos. */
+      @font-face {
+        font-family: 'Spectral'; font-style: normal; font-weight: 400; font-display: swap;
+        src: url('/fonts/spectral-400-latin.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Spectral'; font-style: normal; font-weight: 700; font-display: swap;
+        src: url('/fonts/spectral-700-latin.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap;
+        src: url('/fonts/inter-400-latin.woff2') format('woff2');
+      }
+      :root {
+        --bg: #f4ede2;
+        --superficie: #ffffff;
+        --tinta: #3b2a20;
+        --bronce: #7e6029;
+        --dorado: #c8a565;
+        --borde: #e2d1b8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--tinta);
+        font-family: Inter, system-ui, sans-serif;
+        font-size: 16px;
+        line-height: 1.78;
+        -webkit-font-smoothing: antialiased;
+      }
+      header {
+        background: var(--tinta);
+        padding: 2.5rem 1.5rem;
+      }
+      header .interior { max-width: 780px; margin: 0 auto; }
+      header a {
+        color: var(--dorado);
+        text-decoration: none;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+      header a:hover { text-decoration: underline; }
+      header p {
+        color: #fff;
+        font-family: Spectral, Georgia, serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin: 0.75rem 0 0;
+      }
+      main {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 3.5rem 1.5rem 4rem;
+      }
+      h1 {
+        font-family: Spectral, Georgia, serif;
+        font-size: clamp(2rem, 5vw, 2.75rem);
+        line-height: 1.15;
+        margin: 0 0 0.5rem;
+      }
+      .vigencia {
+        color: #5c4b3e;
+        font-size: 0.85rem;
+        margin: 0 0 2.5rem;
+      }
+      h2 {
+        font-family: Spectral, Georgia, serif;
+        font-size: 1.4rem;
+        margin: 2.75rem 0 0.75rem;
+        padding-top: 1.75rem;
+        border-top: 1px solid var(--borde);
+      }
+      h2:first-of-type { border-top: 0; padding-top: 0; }
+      h3 { font-family: Spectral, Georgia, serif; font-size: 1.05rem; margin: 1.5rem 0 0.4rem; }
+      p, li { color: #4a382c; }
+      ul { padding-left: 1.15rem; }
+      li { margin-bottom: 0.5rem; }
+      a { color: var(--bronce); }
+      strong { color: var(--tinta); }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.25rem 0;
+        font-size: 0.92rem;
+      }
+      th, td {
+        text-align: left;
+        padding: 0.7rem 0.8rem;
+        border-bottom: 1px solid var(--borde);
+        vertical-align: top;
+      }
+      th { background: var(--tinta); color: #fff; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; }
+      .marco {
+        background: var(--superficie);
+        border-left: 3px solid var(--dorado);
+        padding: 1.1rem 1.25rem;
+        margin: 1.25rem 0;
+      }
+      .marco p { margin: 0; }
+      .marco p + p { margin-top: 0.75rem; }
+      footer {
+        background: var(--tinta);
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 2rem 1.5rem;
+      }
+      footer div { max-width: 780px; margin: 0 auto; }
+      @media (prefers-reduced-motion: reduce) {
+        * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+      }
+    </style>
+    <style>
+      main { text-align: center; padding-top: 5rem; }
+      .codigo {
+        font-family: Spectral, Georgia, serif;
+        font-size: clamp(4.5rem, 16vw, 8rem);
+        font-weight: 700;
+        color: var(--dorado);
+        line-height: 1;
+        margin: 0;
+      }
+      .acciones {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 2.5rem;
+      }
+      .acciones a {
+        display: inline-block;
+        padding: 1rem 2rem;
+        border-radius: 2px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+      .principal { background: var(--dorado); color: var(--tinta); }
+      .principal:hover { background: #d9bc85; }
+      .secundaria { border: 1px solid var(--borde); color: var(--tinta); }
+      .secundaria:hover { background: var(--superficie); }
+      .sugerencias { margin-top: 3.5rem; font-size: 0.95rem; }
+      .sugerencias a { display: inline-block; margin: 0 0.6rem; }
+      :focus-visible { outline: 2px solid var(--dorado); outline-offset: 3px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="interior">
+        <a href="/">&larr; Volver al inicio</a>
+        <p>Estudio Jurídico Braki &amp; Asoc.</p>
+      </div>
+    </header>
+
+    <main>
+      <p class="codigo">404</p>
+      <h1>Esta página no existe</h1>
+      <p>
+        Puede que el enlace esté mal escrito o que la página haya cambiado de lugar.
+        Su consulta, en cambio, sigue en pie.
+      </p>
+
+      <div class="acciones">
+        <a class="principal" href="/#contacto">Ir a contacto</a>
+        <a class="secundaria" href="/">Volver al inicio</a>
+      </div>
+
+      <p class="sugerencias">
+        <a href="/#areas-de-practica">Áreas de práctica</a>
+        <a href="/#sobre-el-estudio">Sobre el estudio</a>
+        <a href="/privacidad.html">Política de privacidad</a>
+      </p>
+    </main>
+
+    <footer>
+      <div>© 2026 Estudio Jurídico Braki &amp; Asoc.</div>
+    </footer>
+  </body>
+</html>

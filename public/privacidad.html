@@ -23,13 +23,21 @@
     <meta name="robots" content="index, follow" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
-    />
     <style>
+      /* Fuentes propias: esta pagina no debe pedirle nada a terceros, menos aun
+         siendo la que declara que el sitio no transfiere datos. */
+      @font-face {
+        font-family: 'Spectral'; font-style: normal; font-weight: 400; font-display: swap;
+        src: url('/fonts/spectral-400-latin.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Spectral'; font-style: normal; font-weight: 700; font-display: swap;
+        src: url('/fonts/spectral-700-latin.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap;
+        src: url('/fonts/inter-400-latin.woff2') format('woff2');
+      }
       :root {
         --bg: #f4ede2;
         --superficie: #ffffff;
@@ -223,11 +231,6 @@
             <td>Datos técnicos de conexión, como la dirección IP</td>
           </tr>
           <tr>
-            <td>Google Fonts</td>
-            <td>Tipografías del sitio</td>
-            <td>Dirección IP, al descargarse las tipografías</td>
-          </tr>
-          <tr>
             <td>Calendly</td>
             <td>Agenda de reuniones, sólo si usted la usa</td>
             <td>Los datos que usted cargue al reservar</td>
@@ -244,8 +247,10 @@
       <p>
         Este sitio <strong>no utiliza cookies propias, ni cookies publicitarias, ni
         herramientas de analítica o seguimiento</strong>. No lo perfilamos ni registramos su
-        navegación. Si esto cambiara, actualizaremos esta política y lo advertiremos en el
-        sitio.
+        navegación. Las tipografías se sirven desde este mismo dominio, de modo que
+        <strong>navegar el sitio no transmite ningún dato suyo a terceros</strong>: eso ocurre
+        únicamente si usted decide enviar el formulario o abrir la agenda. Si esto cambiara,
+        actualizaremos esta política y lo advertiremos en el sitio.
       </p>
 
       <h2>7. Plazo de conservación</h2>

@@ -92,13 +92,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-white/60 text-[10px] font-display uppercase tracking-widest">
+        <div className="mt-20 pt-8 border-t border-white/5">
+          <p className="text-white/60 text-[10px] font-display uppercase tracking-widest text-center md:text-left">
             © {new Date().getFullYear()} Estudio Jurídico Braki & Asoc. Todos los derechos reservados.
           </p>
-          <div className="flex space-x-6 grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all">
-            <span className="text-[9px] font-display uppercase tracking-[0.4em] font-bold">Diseño & Desarrollo Premium</span>
-          </div>
         </div>
       </div>
     </footer>

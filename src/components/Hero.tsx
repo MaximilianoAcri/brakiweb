@@ -47,7 +47,7 @@ const Hero = () => {
             decoding="async"
             className="h-[72px] md:h-[112px] lg:h-[130px] w-auto"
           />
-          <div className="w-16 h-[1px] bg-accent-gold mt-5" />
+          <div className="regla-dorada w-16 h-[1px] bg-accent-gold mt-5" />
         </div>
         
         {/* Main Title - Reduced size to force two exact lines on 1536px+ */}
@@ -71,7 +71,7 @@ const Hero = () => {
             href={CALENDLY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent-gold text-primary-text px-8 md:px-10 py-5 rounded-sm font-display font-bold text-[11px] uppercase tracking-[0.2em] whitespace-nowrap hover:bg-[#D9BC85] transition-all w-full sm:w-auto shadow-2xl text-center inline-flex items-center justify-center gap-3"
+            className="bg-accent-gold text-primary-text px-8 md:px-10 py-5 rounded-sm font-display font-bold text-[11px] uppercase tracking-[0.2em] whitespace-nowrap motion-safe:active:scale-[0.97] hover:bg-[#D9BC85] transition-all w-full sm:w-auto shadow-2xl text-center inline-flex items-center justify-center gap-3"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -82,7 +82,7 @@ const Hero = () => {
             href={whatsappLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-white/70 text-white px-8 md:px-10 py-5 rounded-sm font-display font-bold text-[11px] uppercase tracking-[0.2em] whitespace-nowrap hover:bg-white hover:text-primary-text transition-all w-full sm:w-auto text-center inline-flex items-center justify-center gap-3"
+            className="border border-white/70 text-white px-8 md:px-10 py-5 rounded-sm font-display font-bold text-[11px] uppercase tracking-[0.2em] whitespace-nowrap motion-safe:active:scale-[0.97] hover:bg-white hover:text-primary-text transition-all w-full sm:w-auto text-center inline-flex items-center justify-center gap-3"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
               <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z"/>

@@ -97,7 +97,7 @@ const PracticeAreas = () => {
         <Reveal className="text-center max-w-2xl mx-auto mb-20">
           <p className="text-accent-gold-text font-display font-bold uppercase tracking-[0.22em] text-[10px] mb-6">Áreas de Especialización</p>
           <h2 className="text-5xl md:text-6xl font-serif text-primary-text mb-8">Práctica Profesional</h2>
-          <div className="w-16 h-[1px] bg-accent-gold mx-auto" />
+          <div className="regla-dorada w-16 h-[1px] bg-accent-gold mx-auto" />
         </Reveal>
 
         {/* items-stretch keeps every card in a row the same height even though

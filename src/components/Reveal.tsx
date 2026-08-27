@@ -103,6 +103,9 @@ const Reveal = ({
   return (
     <Tag
       ref={ref as never}
+      /* Lets children react to the reveal without each one observing on its
+         own — see .regla-dorada in index.css. */
+      data-revelado={visible ? 'true' : 'false'}
       className={`motion-safe:transition-all motion-safe:duration-700 motion-safe:ease-out ${
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
       } ${className}`}

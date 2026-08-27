@@ -5,11 +5,14 @@ import WhyChooseUs from './components/WhyChooseUs'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ProgresoLectura from './components/ProgresoLectura'
 import { whatsappLink } from './config'
 
 function App() {
   return (
     <div className="min-h-screen bg-primary-bg selection:bg-accent-gold/30 selection:text-primary-text">
+      <ProgresoLectura />
+
       {/* Lets keyboard and screen-reader users jump past the nav. Hidden until
           focused, so it costs sighted users nothing. */}
       <a

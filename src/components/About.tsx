@@ -7,7 +7,7 @@ const About = () => {
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col lg:flex-row items-center gap-20">
           {/* Image Section */}
-          <Reveal className="w-full lg:w-1/2 relative">
+          <Reveal className="group w-full lg:w-1/2 relative">
             <div className="relative z-10">
               <div className="aspect-[4/5] rounded-sm overflow-hidden shadow-2xl">
                 <img 
@@ -15,7 +15,7 @@ const About = () => {
                   alt="Pablo Matías Braki" 
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover motion-safe:transition-transform motion-safe:duration-[1200ms] motion-safe:ease-out motion-safe:scale-[1.06] motion-safe:group-data-[revelado=true]:scale-100"
                 />
               </div>
               

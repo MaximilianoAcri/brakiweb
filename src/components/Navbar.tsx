@@ -7,11 +7,24 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    // Passive so the listener never blocks scrolling, and throttled to one
+    // frame: scroll fires far more often than the screen repaints.
+    let pendiente = false;
+
+    const medir = () => {
+      pendiente = false;
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    const alScrollear = () => {
+      if (pendiente) return;
+      pendiente = true;
+      requestAnimationFrame(medir);
+    };
+
+    medir();
+    window.addEventListener('scroll', alScrollear, { passive: true });
+    return () => window.removeEventListener('scroll', alScrollear);
   }, []);
 
   const navLinks = [
@@ -61,7 +74,7 @@ const Navbar = () => {
             href={CALENDLY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent-gold hover:bg-[#D9BC85] text-primary-text px-7 py-3 rounded-sm text-[10px] font-display font-bold uppercase tracking-[0.2em] transition-all duration-300 shadow-lg shadow-accent-gold/20 inline-flex items-center gap-2"
+            className="bg-accent-gold hover:bg-[#D9BC85] text-primary-text px-7 py-3 rounded-sm text-[10px] font-display font-bold uppercase tracking-[0.2em] motion-safe:active:scale-[0.97] transition-all duration-300 shadow-lg shadow-accent-gold/20 inline-flex items-center gap-2"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />

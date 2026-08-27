@@ -110,7 +110,7 @@ const Contact = () => {
               href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group mt-12 flex items-center gap-6 bg-accent-gold text-primary-text p-8 rounded-sm shadow-xl shadow-accent-gold/20 hover:bg-[#B59640] transition-colors"
+              className="group mt-12 flex items-center gap-6 bg-accent-gold text-primary-text p-8 rounded-sm shadow-xl shadow-accent-gold/20 hover:bg-[#B59640] transition-all motion-safe:active:scale-[0.99]"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-9 w-9 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -295,7 +295,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={status === 'submitting'}
-                  className="w-full bg-primary-text text-white py-5 rounded-sm font-display font-bold text-[11px] uppercase tracking-[0.2em] hover:bg-accent-corporate transition-all shadow-xl disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full bg-primary-text text-white py-5 rounded-sm font-display font-bold text-[11px] uppercase tracking-[0.2em] hover:bg-accent-corporate transition-all shadow-xl motion-safe:active:scale-[0.99] disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {status === 'submitting' ? 'Enviando...' : 'Enviar Consulta'}
                 </button>

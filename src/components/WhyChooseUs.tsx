@@ -1,3 +1,4 @@
+import Contador from './Contador';
 import Reveal from './Reveal';
 
 const WhyChooseUs = () => {
@@ -53,29 +54,45 @@ const WhyChooseUs = () => {
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16">
+          {/* The right-hand list already staggered in while this column arrived
+              all at once, which read as unfinished. Each block now lands in
+              reading order. */}
           <div className="w-full lg:w-1/2">
-            <p className="text-accent-gold font-display font-bold uppercase tracking-[0.22em] text-[10px] mb-6">Valores del Estudio</p>
-            <h2 className="text-5xl md:text-6xl font-serif mb-10 leading-tight">
-              ¿Por qué confiar <br />
-              en nuestra firma?
-            </h2>
-            <p className="text-white/75 text-lg mb-16 max-w-lg leading-[1.75] font-sans">
-              En Braki & Asoc. combinamos la excelencia técnica con una calidez humana que nos diferencia. 
-              No solo resolvemos problemas, construimos soluciones.
-            </p>
-            
+            <Reveal>
+              <p className="text-accent-gold font-display font-bold uppercase tracking-[0.22em] text-[10px] mb-6">Valores del Estudio</p>
+            </Reveal>
+            <Reveal delay={90}>
+              <h2 className="text-5xl md:text-6xl font-serif mb-10 leading-tight">
+                ¿Por qué confiar <br />
+                en nuestra firma?
+              </h2>
+            </Reveal>
+            <Reveal delay={180}>
+              <p className="text-white/75 text-lg mb-16 max-w-lg leading-[1.75] font-sans">
+                En Braki & Asoc. combinamos la excelencia técnica con una calidez humana que nos diferencia. 
+                No solo resolvemos problemas, construimos soluciones.
+              </p>
+            </Reveal>
+
             {/* Only verifiable claims here. A "95% casos exitosos" figure was
                 removed: it is unprovable and, for a law firm, advertising
                 success rates invites a professional-conduct problem. */}
             <div className="grid grid-cols-2 gap-12">
-              <div className="flex flex-col">
-                <span className="text-5xl font-serif text-accent-gold font-bold mb-2">5+</span>
+              <Reveal delay={270} className="flex flex-col">
+                <Contador
+                  hasta={5}
+                  sufijo="+"
+                  className="text-5xl font-serif text-accent-gold font-bold mb-2"
+                />
                 <span className="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-white/70">Años de experiencia</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-5xl font-serif text-accent-gold font-bold mb-2">6</span>
+              </Reveal>
+              <Reveal delay={380} className="flex flex-col">
+                <Contador
+                  hasta={6}
+                  className="text-5xl font-serif text-accent-gold font-bold mb-2"
+                />
                 <span className="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-white/70">Áreas de práctica</span>
-              </div>
+              </Reveal>
             </div>
           </div>
 

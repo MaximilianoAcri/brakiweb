@@ -1,9 +1,10 @@
 import fondoHero from '../assets/Fondohero.webp';
 import { CALENDLY_URL, whatsappLink } from '../config';
+import emblema from '../assets/emblema-claro.webp';
 
 const Hero = () => {
   return (
-    <section id="inicio" className="relative h-screen flex items-center overflow-hidden">
+    <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden pt-32 pb-20 md:pt-36 md:pb-24">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -19,17 +20,27 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[#3B2A20]/50 z-10" />
       </div>
       
-      <div className="container ml-0 px-6 md:px-12 lg:pl-16 relative z-20 text-left max-w-2xl lg:w-1/2 fade-in-up">
+      <div className="container ml-0 px-6 md:px-12 lg:pl-16 relative z-20 text-left max-w-2xl lg:max-w-none lg:w-3/5 xl:w-1/2 fade-in-up">
         {/* Top Label - Adjusted margin and color */}
-        <div className="flex flex-col items-start mb-10 mt-16">
-          <span className="text-accent-gold font-display font-bold tracking-[0.4em] uppercase text-[10px] md:text-[11px]">
-            Estudio Jurídico Braki & Asoc.
-          </span>
-          <div className="w-16 h-[1px] bg-accent-gold mt-4" />
+        <div className="flex flex-col items-start mb-8">
+          {/* The firm's emblem, in its light variant so it reads against the
+              photo. Only the crest is used — the "Estudio Juridico" and tagline
+              lines baked into the full logo are illegible at this size and would
+              repeat the headline. Eager, not lazy: it is above the fold. */}
+          <img
+            src={emblema}
+            alt="Estudio Jurídico Braki & Asoc."
+            width={355}
+            height={300}
+            loading="eager"
+            decoding="async"
+            className="h-[72px] md:h-[112px] lg:h-[130px] w-auto"
+          />
+          <div className="w-16 h-[1px] bg-accent-gold mt-5" />
         </div>
         
         {/* Main Title - Reduced size to force two exact lines on 1536px+ */}
-        <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-serif text-white leading-[1.1] mb-10 font-bold max-w-4xl">
+        <h1 className="text-4xl md:text-5xl xl:text-[3.5rem] font-serif text-white leading-[1.1] mb-10 font-bold max-w-4xl">
           Defensa estratégica. <br />
           <span className="text-[#F4EDE2]/90">Soluciones concretas.</span>
         </h1>

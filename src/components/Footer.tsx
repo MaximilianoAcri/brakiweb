@@ -8,7 +8,7 @@ import {
   WHATSAPP_DISPLAY,
   whatsappLink,
 } from '../config';
-import Logo from './Logo';
+import logoClaro from '../assets/logo-claro.webp';
 
 const Footer = () => {
   return (
@@ -17,7 +17,19 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-16">
           {/* Logo & Info */}
           <div className="w-full lg:w-1/3">
-            <span className="mb-8 block"><Logo tone="light" /></span>
+            {/* The firm's own mark, in its light variant. The artwork is dark brown
+                ink on cream, which disappears against this footer, so the ink is
+                remapped to cream and gold. It sits here rather than in the navbar
+                because the script monogram and the laurel need room to read. */}
+            <img
+              src={logoClaro}
+              alt="Estudio Jurídico Braki & Asoc."
+              width={440}
+              height={454}
+              loading="lazy"
+              decoding="async"
+              className="mb-8 block w-[210px] h-auto"
+            />
             <p className="text-white/70 text-sm leading-relaxed max-w-sm font-sans">
               Defensa estratégica y soluciones reales. 
               Compromiso con la excelencia y la ética profesional en cada caso.

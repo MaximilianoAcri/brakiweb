@@ -65,7 +65,7 @@ const About = () => {
                 </div>
                 <div>
                   <p className="text-primary-text font-bold text-[11px] font-display uppercase tracking-widest">Matriculado</p>
-                  <p className="text-[10px] text-primary-text/75 font-display tracking-widest">CPACF / CASM</p>
+                  <p className="text-[10px] text-primary-text/75 font-display tracking-widest">CPACF / CALM</p>
                 </div>
               </div>
 
